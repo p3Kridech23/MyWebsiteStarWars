@@ -1,0 +1,46 @@
+<html>
+<head>
+<script language="JavaScript">
+var srcList = ["Images/imgAnim/imp0.jpg", 
+               "Images/imgAnim/imp1.jpg", 
+               "Images/imgAnim/imp2.jpg", 
+               "Images/imgAnim/imp3.jpg",  
+               "Images/imgAnim/imp4.jpg",  
+               "Images/imgAnim/imp5.jpg",  
+               "Images/imgAnim/imp6.jpg",  
+               "Images/imgAnim/imp7.jpg",  
+               "Images/imgAnim/imp8.jpg",  
+               "Images/imgAnim/imp9.jpg",  
+               "Images/imgAnim/imp10.jpg"];		   
+var index = 0;
+var loopCount = 0;
+
+
+function begin()
+{
+    index = index +1;
+// my list has 11 elements, so the last element is
+// at index 10
+if( index > 10) // larger than 8 will error.
+{
+    index = 0;
+}
+document.getElementById("myPic").src = srcList[index];
+setTimeout("begin()", 1000);
+
+}
+</script>
+</head>
+<body bgcolor = #ffff00>
+<font color = blue>
+<center>
+<h1>My Darth Vader Image</h1>
+<img id="myPic" src="images/imgAnim/img0.jpg" width="600"/>
+
+<br/><br/>
+<input type="button" value="Start!" onclick="begin()">
+<p>Click here to  <a href="index.html">return to my home page. </a>
+</center>
+</body>
+</html>
+
